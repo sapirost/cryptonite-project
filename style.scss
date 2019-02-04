@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Fahkwang|Fredoka+One|Handlee|Titan+One');
+$savedR: 30px;
+
+/* *{font-family: 'Fahkwang', sans-serif;} */
+.container-content {
+  flex-wrap: wrap;
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: center;
+  margin: 10px;
+}
+
+.card {
+  margin: 10px;
+}
+
+.heading {
+  background-image: url("wallpaper.jpg");  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-bottom-right-radius: $savedR;
+  height: 300px;
+  position:relative;
+}
+
+.title {
+    position:absolute;
+    bottom:50px;
+    left: 0;
+    .shadowText {
+        font-size: 100px;
+      font-family: 'Titan One', cursive;
+      color: #212529;
+      line-height: 0.8em;
+      letter-spacing: 0.1em;
+      text-shadow: 
+      -3px -3px 0 #fff, 
+      3px -3px 0 #fff, 
+      -3px 3px 0 #fff,
+    3px 3px 0 #fff, 
+    4px 4px 0 #212529, 
+    5px 5px 0 #212529, 
+    6px 6px 0 #212529,
+        7px 7px 0 #212529;
+    }
+    .script {
+      font-family:'Handlee', cursive;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+  }
+  nav.navbar {
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    left: 0;
+    height: 45px;
+  background-color:  transparentize(#cd8648, 0.4);
+  padding: 0;
+  font-family: "Anton", sans-serif !important;
+  font-size: 20px;
+  text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
+  border-bottom-right-radius: $savedR;
+  a {
+  cursor: pointer;
+}
+}
+
+  
+.loading {
+  text-align: center;
+  font-size: 56px;
+  font-weight: bold;
+  display: flex;
+  i {
+    margin-right: 10px;
+  }
+}
+.card {
+  width: 10rem;
+  text-align: center;
+}
+.btn-info {
+  margin-bottom: 10px;
+}
+.error {
+  display: flex;
+  font-size: 56px;
+  i {
+    margin: 17px 5px 0 0;
+  }
+}
+
+.card-body {
+  padding: 1rem;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.67);
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgba(0,0,0,.9)
+}
+
+.btn-outline-success {
+    border-bottom-right-radius: $savedR;
+  border-color: white;
+  margin-right: 5px;
+  padding: 2px 10px 5px 10px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.67);
+  text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
+  height: calc(2.25rem + 2px);
+  &:hover {
+    color: rgba(0,0,0,.9);
+    background-color: transparentize(#cd8648, 0.3);
+    border-color: white;
+  }
+}
+/* footer {
+    height: 130px;
+    background-image: url("wallpaper.jpg"); 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ */
