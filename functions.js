@@ -1,26 +1,58 @@
+
 const arrCoins = [];
 $(document).ready(() => {
-    /* appendProgressbar(); */
     showCoins();
-    $("#nav-about").on("click", () => {
-        $(".container-content").empty();
-        /* loading(); */
-        $.ajax({
-            type: "GET",
-            url: "file:///C:/Users/User.DESKTOP-0403MBS/Google%20Drive/full%20stack/second%20project/about.html",
+    $(".nav-link").on("click", (e) => {
+        let ea = e.target.id;
+        if (ea != 'nav-home') {
+            $.ajax({
+                type: "GET",
+                url: `${ea}.html`,
+                success: function (results) {
+                    $(".container-content").html(results);
+                    $(".nav-item").each(function () {
+                        $(this).removeClass("active");
+                    });
+                    $(`#${ea}`).parent().addClass("active");
+                },
+            });
+        }
+        else {
+            $(".nav-item").each(function () {
+                $(this).removeClass("active");
+            });
+            $("#nav-home").addClass("active");
+        }
+    });
 
-            success: function (results) {
-                $(".container-content").append(results);
-            },
-            error: function (error) {
-                console.log(error);
+    $("#searchBTN").on("click", () => {
+        var value = $("#searchCoin").val().trim().toLowerCase();
+        if (value!="") {
+        var arrByID = arrCoins.filter(function (item) {
+            for (var i = 0; i < value.length; i++) {
+                var boole = true;
+                if (item.symbol[i] != value[i]) {
+                    boole = false;
+                    break;
+                }
             }
+            return boole;
         });
+        $(".container-content").empty();
+        if (arrByID.length>0) {
+            for (var index=0;index<arrByID.length;index++) {
+                appendCoin(arrByID[index]);
+            }
+        }
+         else {
+            $(".container-content").html(`<div class=error><i class="fas fa-exclamation-triangle"></i><p>Not Found</p></div>`);
+         }
+       } 
     });
 });
 
 $(document).ajaxStart(function () {
-    $(".container-content").append(`<div class="loading"><i class="fa fa-refresh fa-spin"></i><h1>Loading...</h1></div>`);
+    $(".container-content").html(`<div class="loading"><i class="fa fa-refresh fa-spin"></i><h1>Loading...</h1></div>`);
 });
 $(document).ajaxStop(function () {
     $(".loading").remove();
@@ -28,7 +60,6 @@ $(document).ajaxStop(function () {
 
 
 function showCoins() {
-    /* loading(); */
     $.ajax({
         type: "GET",
         url: 'https://api.coingecko.com/api/v3/coins/list',
@@ -46,7 +77,6 @@ function showCoins() {
     });
 }
 function appendCoin(coin) {
-    /* loading(); */
     $.ajax({
         type: "GET",
         url: `https://api.coingecko.com/api/v3/coins/${coin.id}`,
@@ -56,7 +86,7 @@ function appendCoin(coin) {
             ILS ${results.market_data.current_price.ils.toFixed(5)}₪`;
             $(".container-content").append(
                 `<div class="card"><img class="card-img-top" src=${results.image.large} alt="Card image cap">
-            <div class="card-body"><h5 class="card-title">${coin.symbol}</h5>
+            <div class="card-body"><h5 class="card-title">${coin.symbol.toUpperCase()}</h5>
             <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo${coin.id}" 
             aria-expanded="false" aria-controls="collapseExample">More Info</button>
            <div id="demo${coin.id}" class="collapse">${coinValue}</div></div></div>`);
@@ -68,6 +98,3 @@ function appendCoin(coin) {
         }
     });
 }
-/* function loading() {
-    $(".container-content").append(`<div class="loading"><i class="fa fa-refresh fa-spin"></i><h1>Loading...</h1></div>`);
-} */

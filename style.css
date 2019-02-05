@@ -13,11 +13,12 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 10px;
+  margin: 20px;
+  min-height: 200px;
 }
 
 .card {
-  margin: 10px;
+  margin: 25px;
 }
 
 .heading {
@@ -43,7 +44,7 @@
   color: #212529;
   line-height: 0.8em;
   letter-spacing: 0.1em;
-  text-shadow: -3px -3px 0 #fff,  3px -3px 0 #fff,  -3px 3px 0 #fff, 3px 3px 0 #fff,  4px 4px 0 #212529,  5px 5px 0 #212529,  6px 6px 0 #212529, 7px 7px 0 #212529;
+  text-shadow: -3px -3px 0 #fff,  3px -3px 0 #fff,  -3px 3px 0 #fff, 3px 3px 0 #fff,  4px 4px 0 #212529,  5px 5px 0 #212529,  6px 6px 0 #212529, 7px 7px 0 #212529;
 }
 
 .title .script {
@@ -79,9 +80,11 @@ nav.navbar a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 40px;
 }
 
 .loading i {
+  width: 40px;
   margin-right: 10px;
 }
 
@@ -134,13 +137,31 @@ nav.navbar a {
   border-color: white;
 }
 
-/* footer {
-    height: 130px;
-    background-image: url("wallpaper.jpg"); 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.btn-outline-success:focus, .form-control:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.534);
+          box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.534);
+  border-color: white;
 }
- */
+
+footer {
+  bottom: 0;
+  height: 130px;
+  background-image: url("footer.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.coin {
+  margin-top: 7px;
+  width: 30px;
+  height: 30px;
+  border-spacing: 0px;
+}
+
+.nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=style.css.map */

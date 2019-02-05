@@ -28,34 +28,36 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" id="nav-home" onclick="showCoins()">Home<span class="sr-only">(current)</span></a>
+                    <img class="coin" id="coin-home" src="coin.png">
+                    <a class="nav-link" id="nav-home" onclick="showCoins()">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Live Reports</a>
+                        <img class="coin" id="coin-live" src="coin.png">
+                    <a class="nav-link" id="nav-live" href="#">Live Reports</a>
                 </li>
                 <li class="nav-item">
+                        <img class="coin" id="coin-about" src="coin.png">
                     <a class="nav-link" id="nav-about" href="#">About</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input id="searchCoin" class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button id="searchBTN" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
             </form>
         </div>
     </nav></div>
-
+<div id="x"></div>
     <div class="container-content">
         
     </div>
     <br>
     <br>
-    <!-- <footer>
+    <footer>
 
-    </footer> -->
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="functions.js"></script>
 </body>
-
 </html>

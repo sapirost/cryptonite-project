@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Anton|Fahkwang|Fredoka+One|Handlee|Titan+One');
 $savedR: 30px;
 
@@ -7,11 +8,12 @@ $savedR: 30px;
   display: flex;
   flex-flow: row-reverse wrap;
   justify-content: center;
-  margin: 10px;
+  margin: 20px;
+  min-height: 200px;
 }
 
 .card {
-  margin: 10px;
+  margin: 25px;
 }
 
 .heading {
@@ -75,10 +77,13 @@ $savedR: 30px;
   text-align: center;
   font-size: 56px;
   font-weight: bold;
-  display: flex;
-  i {
-    margin-right: 10px;
+    display: flex;
+    height: 40px;
+  i{
+      width: 40px;
+      margin-right: 10px;
   }
+  
 }
 .card {
   width: 10rem;
@@ -105,6 +110,7 @@ $savedR: 30px;
   color: rgba(0,0,0,.9)
 }
 
+
 .btn-outline-success {
     border-bottom-right-radius: $savedR;
   border-color: white;
@@ -120,12 +126,24 @@ $savedR: 30px;
     border-color: white;
   }
 }
-/* footer {
+.btn-outline-success:focus,.form-control:focus  {
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.534);
+    border-color: white;
+}
+footer {
+    bottom: 0;
     height: 130px;
-    background-image: url("wallpaper.jpg"); 
-    background-attachment: fixed;
+    background-image: url("footer.jpg"); 
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
 }
- */
+.coin {
+    margin-top: 7px;
+    width: 30px;
+    height: 30px;
+    border-spacing: 0px;
+}
+.nav-item {
+    display: flex;
+}
