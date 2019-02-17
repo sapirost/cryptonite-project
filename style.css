@@ -148,7 +148,8 @@ nav.navbar {
   -webkit-animation: mymove 5s infinite;
 }
 
-#searchBTN, #searchBTN:active {
+#searchBTN,
+#searchBTN:active {
   border-bottom-right-radius: 30px;
   border-color: white;
   margin-right: 5px;
@@ -162,68 +163,115 @@ nav.navbar {
   background-color: transparent;
 }
 
-#searchBTN:hover, #searchBTN:active:hover {
+#searchBTN:hover,
+#searchBTN:active:hover {
   color: #212529;
   background-color: rgba(205, 134, 72, 0.7);
   border-color: white;
 }
 
 .container-content {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-flow: row-reverse wrap;
-          flex-flow: row-reverse wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: 20px;
   min-height: 200px;
   font-family: "Anton", sans-serif;
 }
 
-#card-design {
+.container-content .col-coin {
+  width: 20% !important;
+}
+
+.bigger {
+  border-radius: 1.25rem !important;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  background: url("back-card3.jpg") no-repeat center !important;
+  background-size: cover !important;
+  height: 335px;
+}
+
+.bigger .switch {
+  margin: -5px 0 0 -10px !important;
+  -webkit-transition: margin 3s;
+  transition: margin 3s;
+}
+
+.card-design {
+  /* background-color: rgb(205, 134, 72); */
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  width: 170px;
+  padding: 10px 15px 10px 15px;
+  border-radius: 50%;
   margin: 25px;
-  width: 10rem;
   text-align: center;
-  border: 1px solid #a56e3e;
+  border: 0.5px solid white;
   margin-bottom: 10px;
-  background-color: #cd8648;
-  -webkit-box-shadow: inset 0 0 10px #000000;
-          box-shadow: inset 0 0 10px #000000;
-  border-color: white;
-  color: white;
+  background: url("back-card.jpg") no-repeat center;
+  background-size: cover;
+  -webkit-box-shadow: inset 0 0 6px #000000, 0 0 4px 0.5px #000000;
+          box-shadow: inset 0 0 6px #000000, 0 0 4px 0.5px #000000;
+  color: #212529;
 }
 
-#card-design .card-body {
-  padding: 1rem;
+.card-design .card-body {
+  padding: 0 0 1rem 0;
 }
 
-#card-design .card-body .card-title {
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 1px black;
+.card-design .card-body .card-title {
+  font-family: "Titan One", cursive;
+  text-shadow: -1.5px 0 white, 0 1.5px white, 1.5px 0 white, 0 1.5px white;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
 }
 
-#card-design .card-body .info {
-  text-shadow: -0.4px 0 black, 0 0.4px black, 0.4px 0 black, 0 -0.4px black;
-  height: 70px;
+.card-design .card-body .second-title, .card-design .card-body .info .load {
+  text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
+  margin-bottom: 5px;
+  font-size: 18px;
 }
 
-#card-design .card-body .info .loadInfo {
-  font-size: 20px;
-  margin: auto;
+.card-design .card-body .img .content {
+  height: 100px;
+  width: 100px;
+  padding-top: 0;
+  margin: 0 auto 5px auto;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.card-design .card-body .img .content .card-img-top {
+  border-radius: 50px;
+  background-color: white;
+  -webkit-box-shadow: 0 0 4px 0.5px #000000;
+          box-shadow: 0 0 4px 0.5px #000000;
+  border: 0.5px solid white;
+}
+
+.card-design .card-body .info {
+  height: 80px;
+  padding-top: 5px;
+  text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
+}
+
+.card-design .card-body .info .load {
+  font-size: 25px;
+  margin-top: 5px;
+}
+
+.card-design .card-body .info .load i {
+  margin-right: 10px;
+  font-size: 18px;
+  height: 15px;
 }
 
 .btn-info {
-  margin-bottom: 10px;
+  border-radius: 34px;
+  border: 1px solid #00000091;
   background-color: white;
   -webkit-box-shadow: inset 0 0 10px #000000;
           box-shadow: inset 0 0 10px #000000;
   text-shadow: -0.4px 0 white, 0 0.4px white, 0.4px 0 white, 0 -0.4px white;
-  color: rgba(0, 0, 0, 0.9);
+  color: #212529;
   border: none;
 }
 
@@ -244,6 +292,7 @@ nav.navbar {
   display: -ms-flexbox;
   display: flex;
   font-size: 56px;
+  margin: auto;
 }
 
 .error i {
@@ -266,19 +315,14 @@ nav.navbar {
   font-size: 45px;
 }
 
-.card-img-top {
-  border-radius: 50px;
-  height: 100px;
-  width: 100px;
-  margin: auto;
-}
-
 .switch {
   position: relative;
   display: inline-block;
   width: 40px;
   height: 25px;
-  margin: 5px 0 0 5px;
+  margin: 10px 0 0 15px;
+  -webkit-transition: margin 3s;
+  transition: margin 3s;
 }
 
 .switch input {
@@ -295,8 +339,8 @@ nav.navbar {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   -webkit-box-shadow: inset 0 0 10px #000000 !important;
           box-shadow: inset 0 0 10px #000000 !important;
 }
@@ -307,19 +351,19 @@ nav.navbar {
   height: 18px;
   width: 18px;
   left: 4px;
-  bottom: 4px;
+  bottom: 3px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 input:focus + .slider {
-  -webkit-box-shadow: 0 0 1px #2196F3;
-          box-shadow: 0 0 1px #2196F3;
+  -webkit-box-shadow: 0 0 1px #2196f3;
+          box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {
@@ -330,6 +374,7 @@ input:checked + .slider:before {
 /* Rounded sliders */
 .slider.round {
   border-radius: 34px;
+  border: 1px solid #00000091 !important;
 }
 
 .slider.round:before {
@@ -357,5 +402,31 @@ footer {
 .modal-coins .col {
   margin-bottom: 10px;
   text-align: center;
+}
+
+.loadChart {
+  margin: auto;
+  font-size: 28px;
+  text-align: center;
+  width: 400px;
+  height: 70px;
+}
+
+.errorMess {
+  margin: auto auto 10px auto;
+  text-align: center;
+  width: 400px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+#chartContainer {
+  height: 300px;
+  width: 70%;
+  margin: auto;
+}
+
+.canvasjs-chart-credit {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,82 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="heading">
-            <div class="title">
-                <p class="script" id="script2">it's easy to be update</p>
-                    <p class="shadowText">CRYPTONITE</p>
-                    
-                </div>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <img class="coin" id="coin-home" src="coin.png">
-                    <a class="nav-link" id="nav-home" onclick="showCoins()">Home</a>
-                </li>
-                <li class="nav-item">
+        <div class="title">
+            <p class="script" id="script2">it's easy to be update</p>
+            <p class="shadowText">CRYPTONITE</p>
+
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <img class="coin" id="coin-home" src="coin.png">
+                        <a class="nav-link" id="nav-home" onclick="showCoins()">Home</a>
+                    </li>
+                    <li class="nav-item">
                         <img class="coin" id="coin-live" src="coin.png">
-                    <a class="nav-link" id="nav-live" href="#">Live Reports</a>
-                </li>
-                <li class="nav-item">
+                        <a class="nav-link" id="nav-live" href="#">Live Reports</a>
+                    </li>
+                    <li class="nav-item">
                         <img class="coin" id="coin-about" src="coin.png">
-                    <a class="nav-link" id="nav-about" href="#">About</a>
-                </li>
-            </ul></div>
+                        <a class="nav-link" id="nav-about" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
             <form class="form-inline my-2 my-lg-0">
                 <div class="div-input">
                     <i class="fas fa-search"></i>
-                <input id="searchCoin" class="form-control mr-sm-2" type="search" placeholder="Search Coin">
+                    <input id="searchCoin" class="form-control mr-sm-2" type="search" placeholder="Search Coin">
                 </div>
                 <button id="searchBTN" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
             </form>
-        
-    </nav></div>
-    <div class="container-content">
-            
+
+        </nav>
+    </div>
+    <div class="container-content row">
+
     </div>
     <br>
     <br>
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
                 <div class="modal-header">
-                  <h3 class="modal-title" id="exampleModalCenterTitle">Chosen Coins</h3>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+                    <h3 class="modal-title" id="exampleModalCenterTitle">Chosen Coins</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
-                <p>You can only choose 5 coins, would you like to do some changes?</p>
-                <div class="modal-coins row">
+                    <p>You can only choose 5 coins, would you like to do some changes?</p>
+                    <div class="modal-coins row">
 
-                </div>  
+                    </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary" id="save" data-dismiss="modal">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="save" data-dismiss="modal">Save changes</button>
                 </div>
-              </div>
             </div>
-          </div>
+        </div>
+    </div>
     <footer>
 
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <!-- <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script> -->
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
     <script type="text/javascript" src="functions.js"></script>
 </body>
 
