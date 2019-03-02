@@ -1,0 +1,122 @@
+@-webkit-keyframes bounce {
+  0%, 100%, 20%, 50%, 80% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-25px);
+    transform: translateY(-25px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%, 100%, 20%, 50%, 80% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-25px);
+    transform: translateY(-25px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@-webkit-keyframes mymove {
+  0% {
+    -webkit-transform: rotate3d(0);
+  }
+  20% {
+    -webkit-transform: rotate3d(1, 1, 1, 90deg);
+  }
+  40% {
+    -webkit-transform: rotate3d(2, -1, -1, -0.2turn);
+  }
+  60% {
+    -webkit-transform: rotate3d(0, 1, 0.5, 3.142rad);
+  }
+  80% {
+    -webkit-transform: rotate3d(2, -1, -1, -0.2turn);
+  }
+  100% {
+    -webkit-transform: rotate3d(1, 1, 1, 90deg);
+  }
+}
+
+@keyframes mymove {
+  0% {
+    -webkit-transform: rotate3d(0);
+            transform: rotate3d(0);
+  }
+  20% {
+    -webkit-transform: rotate3d(1, 1, 1, 90deg);
+            transform: rotate3d(1, 1, 1, 90deg);
+  }
+  40% {
+    -webkit-transform: rotate3d(2, -1, -1, -0.2turn);
+            transform: rotate3d(2, -1, -1, -0.2turn);
+  }
+  60% {
+    -webkit-transform: rotate3d(0, 1, 0.5, 3.142rad);
+            transform: rotate3d(0, 1, 0.5, 3.142rad);
+  }
+  80% {
+    -webkit-transform: rotate3d(2, -1, -1, -0.2turn);
+            transform: rotate3d(2, -1, -1, -0.2turn);
+  }
+  100% {
+    -webkit-transform: rotate3d(1, 1, 1, 90deg);
+            transform: rotate3d(1, 1, 1, 90deg);
+  }
+}
+
+@-webkit-keyframes slide-up {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=keyFrames.css.map */
